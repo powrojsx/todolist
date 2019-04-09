@@ -2,6 +2,7 @@
   "name": "todolist",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kpowroznik.github.io/todolist",
   "dependencies": {
     "ghpages": "0.0.10",
     "prop-types": "^15.7.2",
@@ -20,7 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish": "npm run build && ghpages -p dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "publish": "npm run predeploy && npm run deploy"
   },
   "eslintConfig": {
     "extends": "react-app"
